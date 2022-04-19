@@ -30,6 +30,36 @@ namespace liveonswagger.Controllers
             return Ok(retorno);
         }
 
+
+        [HttpGet("{customerId}/listByCustomer")]
+        public ActionResult<PagSeguroTransactionGetDetail> GetByCustomerId(int customerId)
+        {
+            var retorno = new PagSeguroTransactionGetDetail()
+            {
+                Customer = CreateCustomer(),
+                Code = "9898-099808-9797987",
+                DateOfCreation = DateTime.Now,
+                DateOfLastEvent = DateTime.Now,
+                Status = "Created",
+                NetAmount = 1000,
+                Email = "maria@mail.com",
+                Name = "Maria",
+                Active = true
+            };
+
+            return Ok(retorno);
+        }
+
+
+
+        [HttpGet("{id}/status")]
+        public ActionResult<string> GetStatus(int id)
+        {
+            return Ok("Processing");
+        }
+
+
+
         [HttpPost]
         public ActionResult<PagSeguroTransactionGetDetail> Post([FromBody] PagSeguroTransactionPost pagSeguroTransaction)
         {
