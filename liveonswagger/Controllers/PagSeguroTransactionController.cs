@@ -11,6 +11,12 @@ namespace liveonswagger.Controllers
     public class PagSeguroTransactionController : Controller
     {
 
+        /// <summary>
+        ///     Serviço responsável por retornar os detalhes de uma transação
+        /// </summary>
+        /// <param name="id"></param>
+        /// <response code="200">Consulta efetuada</response>
+        /// <response code="404">Transação não encontrada</response>
         [HttpGet("{id}/detail")]
         public ActionResult<PagSeguroTransactionGetDetail> Get(int id)
         {

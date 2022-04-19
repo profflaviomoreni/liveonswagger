@@ -1,12 +1,34 @@
 ﻿using System;
 namespace liveonswagger.Model
 {
+    /// <summary>
+    ///     Cliente 
+    /// </summary>
+    /// <remarks>
+    ///     Entidade que representa a entidade de cliente do sistema
+    /// </remarks>
     public class Customer
     {
+        /// <summary>
+        ///     Primeiro Nome
+        /// </summary>
         public string FirstName { get; set; }
+
+        /// <summary>
+        ///     Último nome
+        /// </summary>
         public string LastName { get; set; }
-        public string Cpf { get; set; }
+
+        /// <summary>
+        ///     CPF
+        /// </summary>
+        public string SocialSecurity { get; set; }
+
         public string Email { get; set; }
+
+        /// <summary>
+        ///     Ativo
+        /// </summary>
         public bool Active { get; set; }
 
     }
