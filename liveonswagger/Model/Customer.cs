@@ -5,7 +5,7 @@ namespace liveonswagger.Model
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        
+        public string Cpf { get; set; }
         public string Email { get; set; }
         public bool Active { get; set; }
 
