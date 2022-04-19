@@ -31,7 +31,16 @@ namespace liveonswagger
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "liveonswagger", Version = "v1" });
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo()
+                    {
+                        Title = "Fiap Api Web API",
+                        Version = "v1",
+                        Description = "A sample application with Swagger, Swashbuckle, and API versioning.",
+                        Contact = new OpenApiContact() { Name = "Bill Mei", Email = "bill.mei@somewhere.com" },
+                        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
+                    });
+
 
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
